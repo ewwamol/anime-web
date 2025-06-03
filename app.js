@@ -184,7 +184,7 @@ const characters = [
   },
   {
     name: "Edward Elric",
-    image: "./Edward.jpg",
+    image: "./img1/Edward.jpg",
     bio: "State Alchemist seeking to restore his brother’s body.",
     power: "Alchemy, Hand Clap Transmutation",
   },
