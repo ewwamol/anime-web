@@ -691,7 +691,7 @@ const demonSlayerCharacters = [
       "Hinokami Kagura (Sun Breathing)",
       "Enhanced Smell",
     ],
-    image: "img/characters/tanjiro.jpeg",
+    image: "./img/characters/tanjiro.jpeg",
   },
   {
     id: 2,
@@ -699,7 +699,7 @@ const demonSlayerCharacters = [
     role: "Main Character",
     bio: "Tanjiro's younger sister turned demon, who fights to protect humans without losing her humanity.",
     powers: ["Demon Blood Art", "Rapid Regeneration", "Size Manipulation"],
-    image: "img/characters/nezuko.jpeg",
+    image: "./img/characters/nezuko.jpeg",
   },
   {
     id: 3,
@@ -723,7 +723,7 @@ const demonSlayerCharacters = [
     role: "Supporting Character",
     bio: "A quiet and skilled Demon Slayer who uses Flower Breathing techniques.",
     powers: ["Flower Breathing", "Enhanced Agility", "Calm and Focused"],
-    image: "img/characters/kanao tsuyuri.jpg",
+    image: "./img/characters/kanao tsuyuri.jpg",
   },
   {
     id: 6,
@@ -731,7 +731,7 @@ const demonSlayerCharacters = [
     role: "Hashira (Water Pillar)",
     bio: "A calm and stoic Water Hashira known for his Water Breathing mastery.",
     powers: ["Water Breathing", "Enhanced Reflexes", "Strong Combat Skills"],
-    image: "img/characters/tomika.jpg",
+    image: "./img/characters/tomika.jpg",
   },
   {
     id: 7,
@@ -755,7 +755,7 @@ const demonSlayerCharacters = [
     role: "Hashira (Sound Pillar)",
     bio: "The flamboyant Sound Hashira known for his ninja background and flashy techniques.",
     powers: ["Sound Breathing", "Enhanced Hearing", "Dual Nichirin Blades"],
-    image: "img/characters/tengen uzui.jpg",
+    image: "./img/characters/tengen uzui.jpg",
   },
   {
     id: 10,
