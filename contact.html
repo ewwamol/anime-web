@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OtakuVault</title>
+</head>
+
+<body>
+
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <style>
+    .contact-section {
+      padding: 40px;
+      margin: 40px;
+      background: #1b1b1b;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-section h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #5700bb;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #5700bb;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: #5700bb;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #3a008a;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+      font-size: 1.1rem;
+    }
+
+    .contact-details p {
+      margin: 10px 0;
+      color: #999999;
+    }
+
+    .contact-details i {
+      color: #5700bb;
+      margin-right: 10px;
+    }
+
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      font-size: 2rem;
+      margin: 0 10px;
+      color: #5700bb;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #3a008a;
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>OtakuVault</h1>
+      <nav>
+        <a href="./index.html" >Home</a>
+        <a href="./characters.html" >Character</a>
+        <a href="./watchlist.html" >Watchlist</a>
+        <a href="./contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <Section class="contact-section">
+      <h1>Contact US</h1>
+      <form class="contact-form"action="https://formspree.io/f/amolchitrak9.gmail.com" method="POST">
+        <input type="email"  name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+     
+
+          <div class="contact-details">
+            <p><i class='bx bxs-envelope'></i> amolchitrak9@gmail.com</p>
+            <p><i class='bx bxs-phone'></i> +91 8459548493</p>
+            <p><i class='bx bxs-map'></i> India</p>
+          </div>
+
+          <div class="social-links">
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-discord'></i></a>
+          </div>
+        </section>
+          
+        <footer>
+            <div class="footer-columns">
+                <div class="footer-about">
+                    <h3>About OtakuVault</h3>
+                    <p>OtakuVault is your ultimate anime portal — discover characters, manage watchlists, and explore
+                        your favorite shows all in one place.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./charecters.html">Characters</a></li>
+                        <li><a href="./watchlist.html">Watchlist</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <div class="socials">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-credit">
+                <p>Made with ❤️ by <strong>Amol Chitrak</strong></p>
+            </div>
+            <p>© 2025 OtakuVault. All rights reserved.</p>
+
+
+        </footer>
+
+    <script>
+// Smooth page transition effect
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    if (this.href && this.getAttribute("href") !== "#" && !this.href.includes("javascript")) {
+      e.preventDefault();
+      document.body.classList.add("page-exit");
+      setTimeout(() => {
+        window.location = this.href;
+      }, 500);
+    }
+  });
+});
+
+
+
+    </script>
+  </body>
+
+</html>

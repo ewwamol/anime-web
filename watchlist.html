@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heros</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .card {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .h12 {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>OtakuVault</h1>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./charecters.html">Character</a>
+        <a href="./watchlist.html" class="active">Watchlist</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header >
+
+    <div class="search-bar">
+      <i class="bx bx-search-alt-2"></i>
+      <input
+        type="text"
+        id="watchlistSearchInput"
+        placeholder="Search in your Watchlist..."
+      />
+      <button type="button" class="btn-submit" onclick="searchWatchlist()">
+        Search
+      </button>
+    </div>
+
+    <h1 class="h12">Your Watchlist</h1>
+    <div id="watchlist-container" class="cards"></div>
+
+    <footer>
+      <div class="footer-columns">
+        <div class="footer-about">
+          <h3>About OtakuVault</h3>
+          <p>
+            OtakuVault is your ultimate anime portal — discover characters,
+            manage watchlists, and explore your favorite shows all in one place.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./charecters.html">Characters</a></li>
+            <li><a href="./watchlist.html">Watchlist</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="socials">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-credit">
+        <p>Made with ❤️ by <strong>Amol Chitrak</strong></p>
+      </div>
+      <p>© 2025 OtakuVault. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function displayWatchlist(list = null) {
+        const watchlist =
+          list || JSON.parse(localStorage.getItem("watchlist")) || [];
+        const container = document.getElementById("watchlist-container");
+        if (watchlist.length === 0) {
+          container.innerHTML = "<p>No items yet!</p>";
+          return;
+        }
+
+        let html = "";
+        watchlist.forEach((item) => {
+          html += `
+          <div class="card">
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <button class="btnDel" onclick="removeFromWatchlist('${item.name}')">❌ Remove</button>
+          </div>`;
+        });
+        container.innerHTML = html;
+      }
+
+      function removeFromWatchlist(name) {
+        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+        watchlist = watchlist.filter((item) => item.name !== name);
+        localStorage.setItem("watchlist", JSON.stringify(watchlist));
+        displayWatchlist();
+      }
+
+      function searchWatchlist() {
+        const searchValue = document
+          .getElementById("watchlistSearchInput")
+          .value.trim()
+          .toLowerCase();
+        const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+        const filteredList = watchlist.filter((item) =>
+          item.name.toLowerCase().includes(searchValue)
+        );
+
+        displayWatchlist(filteredList);
+      }
+
+      // Enter key press pe bhi search
+      document
+        .getElementById("watchlistSearchInput")
+        .addEventListener("keyup", function (event) {
+          if (event.key === "Enter") {
+            searchWatchlist();
+          }
+        });
+
+      displayWatchlist();
+
+      // Smooth page transition effect
+      document.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          if (
+            this.href &&
+            this.getAttribute("href") !== "#" &&
+            !this.href.includes("javascript")
+          ) {
+            e.preventDefault();
+            document.body.classList.add("page-exit");
+            setTimeout(() => {
+              window.location = this.href;
+            }, 500);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

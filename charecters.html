@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Characters</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>OtakuVault</h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./characters.html" class="active">Character</a>
+      <a href="./watchlist.html">Watchlist</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <i class="bx bx-search-alt-2"></i>
+    <input type="text" id="searchInput" placeholder="Search Your fav Character..." />
+
+    <button class="btn-submit" onclick="searchAnime()">Search</button>
+  </div>
+
+  <section class="character-showcase">
+    <h2>Popular Characters</h2>
+    <div class="cards"></div>
+  </section>
+
+  <section class="akatsuki-showcase">
+    <h2>Akatsuki Members</h2>
+    <div class="akatsuki-cards"></div>
+  </section>
+  <section class="naruto-showcase">
+    <h2>Naruto Characters</h2>
+    <div class="naruto-cards"></div>
+  </section>
+  <section class="akatsuki-showcase" >
+       <h2>Demon Slayer </h2>
+    <div class="demon-slayer-cards"></div>
+  </section>
+  <section class="aot-showcase">
+  <h2>Attack on Titan Characters</h2>
+  <div class="aot-cards"></div>
+</section>
+
+
+
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-about">
+        <h3>About OtakuVault</h3>
+        <p>OtakuVault is your ultimate anime portal — discover characters, manage watchlists, and explore
+          your favorite shows all in one place.</p>
+      </div>
+
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./charecters.html">Characters</a></li>
+          <li><a href="./watchlist.html">Watchlist</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-credit">
+      <p>Made with ❤️ by <strong>Amol Chitrak</strong></p>
+    </div>
+    <p>© 2025 OtakuVault. All rights reserved.</p>
+
+
+  </footer>
+
+  <script src="./app.js"> </script>
+</body>
+
+</html>

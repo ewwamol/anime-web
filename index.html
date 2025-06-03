@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuVault</title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="./style.css" />
+
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    </head>
+
+    <style>
+
+.anime-showcase {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.anime-showcase h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #a200ff;
+}
+
+.anime-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.anime-card {
+  max-width: 250px;
+  margin: auto;
+  position: relative;
+  background: rgba(151, 1, 1, 0.082);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(244, 212, 253, 0.3);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+  .anime-image {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    object-fit: cover;
+    height: 320px;
+  }
+
+  .anime-name {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+    text-shadow: 0 0 6px #850073;
+  }
+
+  .anime-hover {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(252, 246, 255, 0.2);
+    color: #fff;
+    padding: 20px;
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .anime-card:hover .anime-hover {
+    opacity: 1;
+  }
+
+  .anime-hover p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .watchlist-btn {
+    margin-top: 15px;
+    width: 100%;
+    background: #6200ff;
+    border: none;
+    color: #222;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .watchlist-btn:hover {
+    background: #b400cc;
+  }
+</style>
+
+    <body>
+        <header>
+           <div class="logo">OtakuVault</div>
+            <nav>
+                <a href="./index.html" class="active">Home</a>
+                <a href="./charecters.html">Characters</a>
+                <a href="./watchlist.html">Watchlist</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+        </header>
+        <div class="search-bar">
+            <i class="bx bx-search-alt-2"></i>
+            <input type="text" id="searchInput" placeholder="Search anime..." />
+            <button class="btn-submit" onclick="searchAnime()">Search</button>
+        </div>
+
+
+        <section class="hero" id="hero">
+            <h2>Welcome to OtakuVerse</h2>
+            <p>Your gateway to the world of anime!</p>
+        </section>
+
+       <section class="anime-showcase">
+  <h2>Popular Anime List</h2>
+  <div class="anime-cards"></div>
+</section>
+
+
+
+        <footer>
+            <div class="footer-columns">
+                <div class="footer-about">
+                    <h3>About OtakuVault</h3>
+                    <p>OtakuVault is your ultimate anime portal — discover characters, manage watchlists, and explore
+                        your favorite shows all in one place.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./charecters.html">Characters</a></li>
+                        <li><a href="./watchlist.html">Watchlist</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <div class="socials">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-credit">
+                <p>Made with ❤️ by <strong>Amol Chitrak</strong></p>
+            </div>
+            <p>© 2025 OtakuVault. All rights reserved.</p>
+
+
+        </footer>
+
+<script>
+const animeList = [
+  {
+    name: "Solo Leveling",
+    rating: 8.9,
+    genre: ["Action", "Fantasy"],
+    episodes: 12,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Solo Leveling.jpg.jpg"
+  },
+  {
+    name: "Delicious in Dungeon",
+    rating: 8.5,
+    genre: ["Adventure", "Comedy", "Fantasy"],
+    episodes: 24,
+    year: 2024,
+    status: "Ongoing",
+    image: "./posters/Delicious in Dungeon.jpg.jpg"
+  },
+  {
+    name: "Frieren: Beyond Journey's End",
+    rating: 9.0,
+    genre: ["Adventure", "Drama", "Fantasy"],
+    episodes: 28,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Frieren Beyond Journeys End.jpg.jpg"
+  },
+  {
+    name: "Dandadan",
+    rating: 8.7,
+    genre: ["Action", "Comedy", "Supernatural"],
+    episodes: 12,
+    year: 2024,
+    status: "Ongoing",
+    image: "./posters/Dandadan.jpg.jpg"
+  },
+  {
+    name: "Kaiju No. 8",
+    rating: 8.3,
+    genre: ["Action", "Sci-Fi"],
+    episodes: 12,
+    year: 2024,
+    status: "Ongoing",
+    image: "./posters/Kaiju No 8.jpg.jpg"
+  },
+  {
+    name: "Yatagarasu: The Raven Does Not Choose Its Master",
+    rating: 8.2,
+    genre: ["Fantasy", "Drama"],
+    episodes: 13,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Yatagarasu The Raven Does Not Choose Its Master.jpg"
+  },
+  {
+    name: "The Apothecary Diaries",
+    rating: 8.6,
+    genre: ["Mystery", "Historical", "Drama"],
+    episodes: 24,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/The Apothecary Diaries.jpg.jpg"
+  },
+  {
+    name: "Rick and Morty: The Anime",
+    rating: 7.5,
+    genre: ["Sci-Fi", "Comedy"],
+    episodes: 10,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Rick and Morty The Anime.jpg.jpg"
+  },
+  {
+    name: "Shangri-La Frontier",
+    rating: 8.4,
+    genre: ["Action", "Adventure", "Fantasy"],
+    episodes: 25,
+    year: 2024,
+    status: "Ongoing",
+    image: "./posters/Shangri-La Frontier.jpg.jpg"
+  },
+  {
+    name: "Train to the End of the World",
+    rating: 8.0,
+    genre: ["Sci-Fi", "Adventure", "Slice of Life"],
+    episodes: 12,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Train to the End of the World.jpg.jpg"
+  },
+  {
+    name: "Alya Sometimes Hides Her Feelings in Russian",
+    rating: 7.8,
+    genre: ["Romance", "Comedy", "Slice of Life"],
+    episodes: 12,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Alya Sometimes Hides Her Feelings in Russian.jpg"
+  },
+  {
+    name: "Himitsu no AiPri",
+    rating: 7.5,
+    genre: ["Music", "Sci-Fi", "Idol"],
+    episodes: 60,
+    year: 2024,
+    status: "Ongoing",
+    image: "./posters/Himitsu no AiPri.jpg.jpg"
+  },
+  {
+    name: "Beyblade X",
+    rating: 7.9,
+    genre: ["Action", "Sports"],
+    episodes: 83,
+    year: 2024,
+    status: "Ongoing",
+    image: "./posters/Beyblade X.jpg.jpg"
+  },
+  {
+    name: "Vinland Saga Season 2",
+    rating: 8.8,
+    genre: ["Action", "Adventure", "Drama"],
+    episodes: 24,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Vinland Saga Season 2.jpg.jpg"
+  },
+  {
+    name: "Jujutsu Kaisen Season 2",
+    rating: 8.9,
+    genre: ["Action", "Supernatural", "Dark Fantasy"],
+    episodes: 23,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Jujutsu Kaisen Season 2.jpg.jpg"
+  },
+  {
+    name: "Demon Slayer: Kimetsu no Yaiba – Hashira Training Arc",
+    rating: 8.7,
+    genre: ["Action", "Supernatural", "Historical"],
+    episodes: 11,
+    year: 2024,
+    status: "Completed",
+    image: "./posters/Demon Slayer Kimetsu no Yaiba – Hashira Training Arc.jpg.jpg"
+  },
+  {
+    name: "Attack on Titan: The Final Season Part 4",
+    rating: 9.0,
+    genre: ["Action", "Drama", "Fantasy"],
+    episodes: 2,
+    year: 2023,
+    status: "Completed",
+    image: "./posters/Attack on Titan The Final Season Part 4.jpg.jpg"
+  },
+  {
+    name: "My Hero Academia Season 7",
+    rating: 8.3,
+    genre: ["Action", "Superhero", "Shounen"],
+    episodes: 13,
+    year: 2025,
+    status: "Ongoing",
+    image: "./posters/My Hero Academia Season 7.jpg.jpg"
+  },
+  {
+    name: "Black Clover: Sword of the Wizard King",
+    rating: 8.2,
+    genre: ["Action", "Fantasy", "Adventure"],
+    episodes: 1,
+    year: 2023,
+    status: "Completed",
+    image: "./posters/Black Clover Sword of the Wizard King.jpg.jpg"
+  },
+  {
+    name: "Blue Lock",
+    rating: 8.4,
+    genre: ["Sports", "Drama"],
+    episodes: 24,
+    year: 2023,
+    status: "Completed",
+    image: "./posters/Blue Lock.jpg.jpg"
+  },
+  {
+    name: "Chainsaw Man",
+    rating: 8.6,
+    genre: ["Action", "Supernatural", "Horror"],
+    episodes: 12,
+    year: 2022,
+    status: "Completed",
+    image: "./posters/Chainsaw Man.jpg.jpg"
+  },
+  {
+    name: "Mob Psycho 100 III",
+    rating: 8.9,
+    genre: ["Action", "Comedy", "Supernatural"],
+    episodes: 12,
+    year: 2022,
+    status: "Completed",
+    image: "./posters/Mob Psycho 100 III.jpg.jpg"
+  },
+  {
+    name: "Spy x Family Season 2",
+    rating: 8.5,
+    genre: ["Action", "Comedy", "Slice of Life"],
+    episodes: 13,
+    year: 2023,
+    status: "Completed",
+    image: "./posters/Spy x Family Season 2.jpg.jpg"
+  },
+  {
+    name: "Tokyo Revengers: Tenjiku Arc",
+    rating: 8.1,
+    genre: ["Action", "Drama", "Supernatural"],
+    episodes: 13,
+    year: 2023,
+    status: "Completed",
+    image: "./posters/Tokyo Revengers Tenjiku Arc.jpg.jpg"
+  },
+  {
+    name: "Made in Abyss: The Golden City of the Scorching Sun",
+    rating: 8.7,
+    genre: ["Adventure", "Drama", "Fantasy"],
+    episodes: 12,
+    year: 2022,
+    status: "Completed",
+    image: "./posters/Made in Abyss The Golden City of the Scorching Sun.jpg.jpg"
+  },
+  {
+    name: "Dr. Stone: New World",
+    rating: 8.3,
+    genre: ["Adventure", "Sci-Fi"],
+    episodes: 11,
+    year: 2023,
+    status: "Completed",
+    image: "./posters/Dr Stone New World.jpg.jpg"
+  },
+  {
+    name: "Overlord IV",
+    rating: 8.2,
+    genre: ["Action", "Fantasy", "Isekai"],
+    episodes: 13,
+    year: 2022,
+    status: "Completed",
+    image: "./posters/Overlord IV.jpg.jpg"
+  },
+  {
+    name: "Re:Zero - Starting Life in Another World",
+    rating: 8.4,
+    genre: ["Drama", "Fantasy", "Psychological"],
+    episodes: 12,
+    year: 2021,
+    status: "Completed",
+    image: "./posters/ReZero Starting Life in Another World Season 2 Part 2.jpg.jpg"
+  }
+];
+
+
+  function addToWatchlist(item) {
+    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    if (watchlist.find(a => a.name === item.name)) {
+      alert(item.name + " is already in your Watchlist!");
+      return;
+    }
+    watchlist.push(item);
+    localStorage.setItem("watchlist", JSON.stringify(watchlist));
+    alert(item.name + " added to Watchlist!");
+  }
+
+  function animeListOnDisplay() {
+    let container = document.querySelector(".anime-cards");
+    if (!container) return;
+
+    let html = "";
+    animeList.forEach(anime => {
+      // Use encodeURIComponent and JSON.stringify to safely pass object to onclick
+      let animeStr = encodeURIComponent(JSON.stringify(anime));
+      html += `
+        <div class="anime-card">
+          <img src="${anime.image}" alt="${anime.name}" class="anime-image" />
+          <h3 class="anime-name">${anime.name}</h3>
+          <div class="anime-hover">
+            <p><strong>Rating:</strong> ${anime.rating}</p>
+            <p><strong>Genres:</strong> ${anime.genre.join(", ")}</p>
+            <p><strong>Episodes:</strong> ${anime.episodes}</p>
+            <p><strong>Year:</strong> ${anime.year}</p>
+            <p><strong>Status:</strong> ${anime.status}</p>
+            <button class="watchlist-btn" onclick='addToWatchlist(JSON.parse(decodeURIComponent("${animeStr}")))' >Add to Watchlist</button>
+          </div>
+        </div>`;
+    });
+
+    container.innerHTML = html;
+  }
+
+  animeListOnDisplay();
+
+
+function searchAnime() {
+  const searchInput = document.getElementById("searchInput");
+  const searchValue = searchInput.value.trim().toLowerCase();
+
+  const filteredList = animeList.filter((anime) =>
+    anime.name.toLowerCase().includes(searchValue)
+  );
+
+  displayFilteredAnime(filteredList);
+}
+
+function displayFilteredAnime(list) {
+  let container = document.querySelector(".anime-cards");
+  if (!container) return;
+
+  let html = "";
+  list.forEach(anime => {
+    let animeStr = encodeURIComponent(JSON.stringify(anime));
+    html += `
+      <div class="anime-card">
+        <img src="${anime.image}" alt="${anime.name}" class="anime-image" />
+        <h3 class="anime-name">${anime.name}</h3>
+        <div class="anime-hover">
+          <p><strong>Rating:</strong> ${anime.rating}</p>
+          <p><strong>Genres:</strong> ${anime.genre.join(", ")}</p>
+          <p><strong>Episodes:</strong> ${anime.episodes}</p>
+          <p><strong>Year:</strong> ${anime.year}</p>
+          <p><strong>Status:</strong> ${anime.status}</p>
+          <button class="watchlist-btn" onclick='addToWatchlist(JSON.parse(decodeURIComponent("${animeStr}")))' >Add to Watchlist</button>
+        </div>
+      </div>`;
+  });
+
+  container.innerHTML = html;
+}
+displayFilteredAnime(filteredList)
+// Enter key press listener
+document
+  .getElementById("searchInput")
+  .addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // prevent form submit if inside a form
+      searchAnime();
+    }
+  });
+
+// Smooth page transition effect
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    if (
+      this.href &&
+      this.getAttribute("href") !== "#" &&
+      !this.href.includes("javascript")
+    ) {
+      e.preventDefault();
+      document.body.classList.add("page-exit");
+      setTimeout(() => {
+        window.location = this.href;
+      }, 500);
+    }
+  });
+});
+
+</script>
+
+
+
+      <!--  <script src="./app.js"></script> -->
+    </body>
+
+</html>
