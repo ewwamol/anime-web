@@ -148,7 +148,7 @@ const characters = [
   },
   {
     name: "Asta",
-    image: "./img1/asta.jpg",
+    image: "./asta.jpg",
     bio: "Magicless boy with anti-magic powers.",
     power: "Anti-Magic Swords, Devil Union",
   },
@@ -178,13 +178,13 @@ const characters = [
   },
   {
     name: "Lelouch vi Britannia",
-    image: "./img1/lelouch.jpg",
+    image: "./lelouch.jpg",
     bio: "Rebel prince leading against Britannia Empire.",
     power: "Geass: Absolute Command",
   },
   {
     name: "Edward Elric",
-    image: "./img1/Edward.jpg",
+    image: "./Edward.jpg",
     bio: "State Alchemist seeking to restore his brother’s body.",
     power: "Alchemy, Hand Clap Transmutation",
   },
