@@ -1,13 +1,13 @@
 const akatsukiMembers = [
   {
     name: "Pain (Nagato Uzumaki)",
-    image: "./img1/pain.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051149/Pain_aaiwvu.jpg",
     bio: "Leader of Akatsuki, wielder of the Rinnegan.",
     power: "Rinnegan, Six Paths of Pain, Almighty Push",
   },
   {
     name: "Konan",
-    image: "./img1/konan.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Konan_chhcvf.jpg",
     bio: "The paper angel of Akatsuki, loyal to Nagato.",
     power: "Paper Jutsu, Paper Ocean",
   },
@@ -25,25 +25,25 @@ const akatsukiMembers = [
   },
   {
     name: "Deidara",
-    image: "./img1/deidara.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Deidara_hp5bgw.jpg",
     bio: "Explosive clay artist and bomber.",
     power: "C1-C4 Clay Explosives, C0 Self-Destruct",
   },
   {
     name: "Sasori",
-    image: "./img1/sasori.jpg",
+    image : src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051149/Sasori_awzlfy.jpg",
     bio: "Master puppeteer who turned himself into a puppet.",
     power: "Human Puppets, Iron Sand",
   },
   {
     name: "Hidan",
-    image: "./img1/hidan.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051147/Hidan_f0tmoj.jpg",
     bio: "Immortal religious zealot of Jashin.",
     power: "Immortality, Ritual Curse Technique",
   },
   {
     name: "Kakuzu",
-    image: "./img1/kakuzu.jpg",
+    image :src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Kakuzu_wrtsd8.jpg",
     bio: "Money-loving ninja with multiple hearts.",
     power: "Earth Grudge Fear, Elemental Masks",
   },
@@ -67,7 +67,7 @@ const akatsukiMembers = [
   },
   {
     name: "Orochimaru",
-    image: "./img1/orochimaru.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Orochimaru_nwpk4o.jpg",
     bio: "One of the Legendary Sannin, obsessed with immortality.",
     power: "Snake Jutsu, Reanimation Jutsu",
   },
@@ -148,7 +148,7 @@ const characters = [
   },
   {
     name: "Asta",
-    image: "./asta.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051813/Asta_hdbuad.jpg",
     bio: "Magicless boy with anti-magic powers.",
     power: "Anti-Magic Swords, Devil Union",
   },
@@ -178,13 +178,13 @@ const characters = [
   },
   {
     name: "Lelouch vi Britannia",
-    image: "./lelouch.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051808/Lelouch_okqlzw.jpg",
     bio: "Rebel prince leading against Britannia Empire.",
     power: "Geass: Absolute Command",
   },
   {
     name: "Edward Elric",
-    image: "./img1/Edward.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Edward_gnvakm.jpg",
     bio: "State Alchemist seeking to restore his brother’s body.",
     power: "Alchemy, Hand Clap Transmutation",
   },
@@ -250,7 +250,7 @@ const narutoCharacters = [
     role: "Main Character",
     bio: "A ninja known for her medical ninjutsu and superhuman strength, and one of Naruto’s closest friends.",
     powers: ["Medical Ninjutsu", "Super Strength", "Chakra Control"],
-    image: "./img1/sakura.jpg",
+    image:src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051147/Ino_chpydf.jpg",
   },
   {
     id: 4,
@@ -282,7 +282,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A ninja who specializes in taijutsu and hard work to overcome his inability to use ninjutsu or genjutsu.",
     powers: ["Strong Taijutsu", "Eight Gates", "Leaf Hurricane"],
-    image: "./img1/rock.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051149/Rock_i6c1nl.jpg",
   },
   {
     id: 8,
@@ -290,7 +290,7 @@ const narutoCharacters = [
     role: "Main Character",
     bio: "The Kazekage of the Hidden Sand Village, capable of manipulating sand with his chakra.",
     powers: ["Sand Manipulation", "Sand Shield", "Shukaku's Power"],
-    image: "./img1/gaara.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Gaara_sjqpgu.jpg",
   },
   {
     id: 9,
@@ -298,7 +298,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "The Fifth Hokage, known for her medical ninjutsu and immense strength.",
     powers: ["Medical Ninjutsu", "Super Strength", "Creation Rebirth"],
-    image: "./img1/tsunade.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051150/Tsunade_vpmuqr.jpg",
   },
   {
     id: 10,
@@ -306,7 +306,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "One of the Legendary Sannin, a powerful ninja and Naruto's mentor.",
     powers: ["Sage Mode", "Rasengan", "Summoning Jutsu"],
-    image: "./img/characters/jiraiya.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749052877/51i4T77SX4L._AC_UF1000_1000_QL80__rgsygb.jpg",
   },
 
   // Akatsuki Members
@@ -345,15 +345,16 @@ const narutoCharacters = [
     role: "Akatsuki Member",
     bio: "The only female member of Akatsuki, uses paper-based jutsu.",
     powers: ["Paper Jutsu", "Explosive Tags", "Flight via Paper"],
-    image: "./img1/konan.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Konan_chhcvf.jpg",
   },
+ 
   {
     id: 15,
     name: "Deidara",
     role: "Akatsuki Member",
     bio: "An explosive expert who uses clay to create bombs.",
     powers: ["Explosive Clay", "C3 Bombs", "Flight via Clay Birds"],
-    image: "./img1/deidara.jpg",
+  image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Deidara_hp5bgw.jpg",
   },
   {
     id: 16,
@@ -361,7 +362,8 @@ const narutoCharacters = [
     role: "Akatsuki Member",
     bio: "A puppet master and poison expert.",
     powers: ["Puppet Mastery", "Poison", "Hiruko Puppet Armor"],
-    image: "./img1/sasori.jpg",
+        image : src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051149/Sasori_awzlfy.jpg",
+
   },
   {
     id: 17,
@@ -369,7 +371,8 @@ const narutoCharacters = [
     role: "Akatsuki Member",
     bio: "Immortal and a follower of Jashin, uses a ritual to link himself to his enemies.",
     powers: ["Immortality", "Curse Ritual", "Scythe Combat"],
-    image: "./img1/hidan.jpg",
+       image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051147/Hidan_f0tmoj.jpg",
+
   },
   {
     id: 18,
@@ -377,7 +380,8 @@ const narutoCharacters = [
     role: "Akatsuki Member",
     bio: "A ninja who can manipulate his body threads to sew himself back together.",
     powers: ["Body Threads", "Multiple Hearts", "Elemental Jutsu"],
-    image: "./img1/kakuzu.jpg",
+        image :src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Kakuzu_wrtsd8.jpg",
+
   },
   {
     id: 19,
@@ -402,7 +406,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A quiet ninja who uses insects to fight.",
     powers: ["Insect Jutsu", "Parasitic Bugs", "Insect Swarm"],
-    image: "./img1/shino.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051149/Shino_xgqnli.jpg",
   },
   {
     id: 22,
@@ -410,7 +414,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A member of the Akimichi clan, uses body expansion techniques.",
     powers: ["Body Expansion", "Human Bullet Tank", "Multi-Size Technique"],
-    image: "./img1/choji.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Choji_vtchm4.jpg",
   },
   {
     id: 23,
@@ -418,7 +422,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A ninja skilled in mind transfer techniques.",
     powers: ["Mind Transfer", "Medical Ninjutsu", "Sensory Skills"],
-    image: "./img1/ino.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051147/Ino_chpydf.jpg",
   },
   {
     id: 24,
@@ -426,7 +430,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A ninja who fights alongside his dog Akamaru.",
     powers: ["Beast Mimicry", "Enhanced Senses", "Fang Over Fang"],
-    image: "./img1/kiba.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Kiba_via8wo.jpg",
   },
   {
     id: 25,
@@ -434,7 +438,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "Kiba's loyal ninja dog partner.",
     powers: ["Tracking", "Enhanced Speed", "Fang Over Fang"],
-    image: "./img1/akamaru.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Akamaru_cc346j.jpg",
   },
   {
     id: 26,
@@ -442,7 +446,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A taijutsu master and mentor of Rock Lee.",
     powers: ["Eight Gates", "Strong Taijutsu", "Leaf Hurricane"],
-    image: "./img1/might.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051147/Might_ec01ft.jpg",
   },
   {
     id: 27,
@@ -450,15 +454,15 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A ninja who specializes in weaponry and scroll techniques.",
     powers: ["Weapon Jutsu", "Summoning Weapons", "Accuracy"],
-    image: "./img1/tenten.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051150/Tenten_nsgs63.jpg",
   },
   {
     id: 28,
-    name: "Rin",
+    name: "Mianto Namikaze",
     role: "Side Character",
     bio: "The Fourth Hokage and Naruto’s father, known for his speed and sealing jutsu.",
     powers: ["Flying Thunder God Technique", "Rasengan", "Sealing Jutsu"],
-    image: "./img1/rin.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Minato_fx00j5.jpg",
   },
   {
     id: 29,
@@ -466,7 +470,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A genius from the Hyuga clan with Byakugan abilities.",
     powers: ["Byakugan", "Gentle Fist", "Rotation Defense"],
-    image: "./img1/neji.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Neji_wvgp5x.jpg",
   },
   {
     id: 30,
@@ -474,7 +478,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A talented Uchiha clan member known for his genjutsu skills.",
     powers: ["Mangekyo Sharingan", "Kotoamatsukami"],
-    image: "./img1/shisui.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051150/Shisui_zaexmj.jpg",
   },
   {
     id: 31,
@@ -482,7 +486,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A jonin instructor specializing in genjutsu.",
     powers: ["Genjutsu", "Kurenai's Genjutsu Techniques"],
-    image: "./img1/kurenai1.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Kurenai1_k2lahx.jpg",
   },
   {
     id: 32,
@@ -506,7 +510,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A puppeteer ninja from the Hidden Sand Village.",
     powers: ["Puppet Mastery", "Poison Use"],
-    image: "./img1/kankuro.jpg",
+    image: src=".https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Kankuro_jthrmy.jpg",
   },
   {
     id: 35,
@@ -546,7 +550,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A controversial leader with multiple Sharingan implanted in his arm.",
     powers: ["Sharingan", "Wind Release", "Sealing Jutsu"],
-    image: "./img1/danzo.jpg",
+    image: src= "https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Danzo_hx9icv.jpg",
   },
   {
     id: 40,
@@ -571,7 +575,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A member of Taka with water body abilities.",
     powers: ["Water Release", "Body Liquefaction"],
-    image: "./img1/suigetsu.jpg",
+    image: src= "https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051150/Suigetsu_plaz3t.jpg",
   },
   {
     id: 43,
@@ -599,11 +603,11 @@ const narutoCharacters = [
   },
   {
     id: 46,
-    name: "Kankuro",
+    name: "Rin",
     role: "Side Character",
-    bio: "Sand Village ninja specializing in puppet jutsu.",
+    bio: "Hidden Village ninja specializing in puppet jutsu.",
     powers: ["Puppet Mastery", "Poison Techniques"],
-    image: "./img1/kankuro.jpg",
+    image: src= "https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/rin_uqf71b.jpg",
   },
   {
     id: 47,
@@ -647,7 +651,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "Head of the Uchiha clan and father of Sasuke and Itachi.",
     powers: ["Sharingan", "Tactical Skills"],
-    image: "./img1/fugaku.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051146/Fugaku_fl3liq.jpg",
   },
   // Add more if you want to reach even higher counts
 ];
@@ -723,7 +727,7 @@ const demonSlayerCharacters = [
     role: "Supporting Character",
     bio: "A quiet and skilled Demon Slayer who uses Flower Breathing techniques.",
     powers: ["Flower Breathing", "Enhanced Agility", "Calm and Focused"],
-    image: "./img1/kanao tsuyuri.jpg",
+    image: src= "https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Kanao_Tsuyuri_ovmzgj.jpg",
   },
   {
     id: 6,
@@ -739,7 +743,7 @@ const demonSlayerCharacters = [
     role: "Hashira (Insect Pillar)",
     bio: "The Insect Hashira who fights demons using poison and precise sword techniques.",
     powers: ["Insect Breathing", "Poison Use", "Medical Knowledge"],
-    image: "./img1/shinobu.jpeg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051149/Shinobu_yamm38.jpg",
   },
   {
     id: 8,
@@ -755,7 +759,7 @@ const demonSlayerCharacters = [
     role: "Hashira (Sound Pillar)",
     bio: "The flamboyant Sound Hashira known for his ninja background and flashy techniques.",
     powers: ["Sound Breathing", "Enhanced Hearing", "Dual Nichirin Blades"],
-    image: "./img1/tengen uzui.jpg",
+    image: src= "https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051150/Tengen_Uzui_xpwiq7.jpg",
   },
   {
     id: 10,
