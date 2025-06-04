@@ -494,7 +494,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A jonin and leader of Team 10, known for his chakra blades.",
     powers: ["Chakra Blades", "Fire Style Jutsu", "Taijutsu"],
-    image: "./img1/asuma.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Asuma_rxavxk.jpg",
   },
   {
     id: 33,
@@ -510,7 +510,7 @@ const narutoCharacters = [
     role: "Side Character",
     bio: "A puppeteer ninja from the Hidden Sand Village.",
     powers: ["Puppet Mastery", "Poison Use"],
-    image: src=".https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Kankuro_jthrmy.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051145/Kankuro_jthrmy.jpg",
   },
   {
     id: 35,
@@ -799,7 +799,7 @@ const demonSlayerCharacters = [
     role: "Hashira (Serpent Pillar)",
     bio: "The strict Serpent Hashira who fights with a snake-like sword style.",
     powers: ["Serpent Breathing", "Enhanced Agility", "Keen Intellect"],
-    image: "./img1/Obanai-Iguro.jpg",
+    image: src="https://res.cloudinary.com/dxpmq6c9r/image/upload/v1749051148/Obanai-Iguro_dpdnpi.jpg",
   },
   {
     id: 15,
