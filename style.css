@@ -1130,3 +1130,13 @@ body, html {
   height: 100%;
   overflow-x: hidden;
 }
+
+
+body::-webkit-scrollbar{
+  width: 15px;
+  background:linear-gradient(to bottom , rgb(68, 0, 255),rgba(152, 0, 182, 0.959));
+}
+body::-webkit-scrollbar-thumb{
+  
+  background: linear-gradient(to bottom,red,black);
+}
