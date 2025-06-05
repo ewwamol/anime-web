@@ -1268,13 +1268,21 @@ function addToWatchlist(item) {
 // Show all on page load
 characterListOnDis();
 
+const allcharacters = [
+  ...akatsukiMembers,
+  ...characters,
+  ...narutoCharacters,
+  ...aotCharacters,
+  ...demonSlayerCharacters,
+];
+
 // Search function
 function searchAnime() {
   const searchValue = document
     .getElementById("searchInput")
     .value.toLowerCase();
 
-  const filteredList = characters.filter((char) =>
+  const filteredList = allcharacters.filter((char) =>
     char.name.toLowerCase().includes(searchValue)
   );
 
@@ -1289,7 +1297,6 @@ document
       searchAnime();
     }
   });
-
 // Smooth page transition effect
 document.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", function (e) {
