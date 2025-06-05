@@ -1247,14 +1247,10 @@ function aotListOnDis() {
           <p class="power"><strong>Powers:</strong> ${character.powers.join(
             ", "
           )}</p>
+          <button class="watchlist-btn" onclick='addToWatchlist(${JSON.stringify(character)})'>Add to Watchlist</button>
         </div>
-        <button class="watchlist-btn" onclick='addToWatchlist(${JSON.stringify(
-          character
-        )})'>
-          Add to Watchlist
-        </button>
       </div>
-    `;
+`;
   });
 
   List.innerHTML = listHTML;
